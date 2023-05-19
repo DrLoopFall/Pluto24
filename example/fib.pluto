@@ -1,0 +1,7 @@
+fib: 1 copy 1 gt &fib.rec if
+fib.rec: 1 copy 1 sub fib 2 pop 2 sub fib add
+
+: Output => Fib of 7 = 13
+main: [ F i b ` o f ` `7 ` `= ` ] print
+      7 fib
+      string print

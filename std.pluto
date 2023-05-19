@@ -1,0 +1,60 @@
+: std lib
+: =======
+
+noop:
+not: 1 neg mul 1 add
+and: mul
+or: bool swap bool add
+pop: 1 add 1 copy copy swap drop
+swap: 2 copy 3 drop
+goto: 1 swap if
+bool: 0 2 pop &not if
+ifelse: 3 pop not bool 1 add drop goto
+eq: sub 1 2 copy &neg if mul 1 add
+neq: eq not
+gt: sub
+gte: gt 1 add
+lt: gte not
+lte: gt not
+neg: 0 swap sub
+
+: string, [ h e l l o ]
+[: 0 ]:
+
+: Reads a line
+read: [ read.run ] 1 drop
+read.run: get 1 copy 10 neq &read.run if
+
+: Print a string
+print: reverse print.run 1 drop
+print.run: 1 copy &put if 1 copy &print.run if
+
+: Reverse a string
+reverse: 0 reverse.run 1 drop 1 drop
+reverse.run: 1 copy 2 add 1 copy 1 add copy &reverse.run2 if
+reverse.run2: pop swap 1 add reverse.run
+
+: Converts positive number to string
+string: 0 swap string.run 1 drop reverse
+string.run: 1 copy &string.run2 if
+string.run2: 1 copy 10 mod `0 add swap 10 div string.run
+
+: Numbers
+`0: 48 `1: 49 `2: 50 `3: 51 `4: 52 `5: 53 `6: 54 `7: 55 `8: 56 `9: 57
+
+: Uppercase letters
+A: 65 B: 66 C: 67 D: 68 E: 69 F: 70 G: 71 H: 72 I: 73 J: 74 K: 75 L: 76 M: 77
+N: 78 O: 79 P: 80 Q: 81 R: 82 S: 83 T: 84 U: 85 V: 86 W: 87 X: 88 Y: 89 Z: 90
+
+: Lowercase letters
+a: 97 b: 98 c: 99 d: 100 e: 101 f: 102 g: 103 h: 104 i: 105 j: 106 k: 107
+l: 108 m: 109 n: 110 o: 111 p: 112 q: 113 r: 114 s: 115 t: 116 u: 117 v: 118
+w: 119 x: 120 y: 121 z: 122
+
+: Symbols
+`!: 33 `": 34 `#: 35 `$: 36 `%: 37 `&: 38 `': 39 `(: 40 `): 41 `*: 42 `+: 43
+`,: 44 `-: 45 `.: 46 `/: 47 `:`: 58 `;: 59 `<: 60 `=: 61 `>: 62 `?: 63 `@: 64
+`[: 91 `\: 92 `]: 93 `^: 94 `_: 95 ``: 96 `{: 123 `|: 124 `}: 125 `~: 126
+
+: Invisible characters
+`: 32 `t: 9 `n: 10 `r: 13

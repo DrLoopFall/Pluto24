@@ -1,0 +1,5 @@
+: Output => What's Your Name: <input>
+            Hello <input>!
+main: [ W h a t `' s ` Y o u r ` N a m e `:` ` ] print
+      read
+      [ H e l l o ` ] print print [ `! ] print

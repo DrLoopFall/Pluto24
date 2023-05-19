@@ -1,0 +1,8 @@
+max: max.run 1 drop
+max.run: 1 sub 1 copy &max.cmp if
+max.cmp: 3 copy 3 copy lt bool 2 add drop max.run
+
+: Output => Max of 7,2,9,5 = 9
+main: [ M a x ` o f ` `7 `, `2 `, `9 `, `5  ` `= ` ] print
+      7 2 9 5 4 max
+      string print

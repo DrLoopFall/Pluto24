@@ -1,0 +1,8 @@
+sum: sum.run 1 drop
+sum.run: 1 sub 1 copy &sum.add if
+sum.add: swap 3 copy add 3 drop swap sum.run
+
+: Output => Sum of 7,2,9,5 = 23
+main: [ S u m ` o f ` `7 `, `2 `, `9 `, `5  ` `= ` ] print
+      7 2 9 5 4 sum
+      string print

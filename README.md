@@ -12,7 +12,7 @@ Pluto24 is a highly customizable programming language, written in just **24 line
 
 
 ## Basic program
-![basic](https://github.com/DrLoopFall/Pluto24/assets/120749263/814db245-63e0-414c-95b8-b39f3dec7ccd)
+![basic](https://github.com/DrLoopFall/Pluto24/assets/120749263/c657fdbb-ff35-440b-86a9-c4245b5ca514)
 Source [basic.pluto](/examples/basic.pluto)
 
 ## Builtin functions
@@ -46,20 +46,22 @@ This is an optional pluto library, which contains commonly used functions.
 
 ## operators.pluto
 This library contains function alias as operators, enables the usage of operators
-instead of keywords to use e.g. `1 2 +` instead of `1 2 add`
+instead of keywords.
+
+e.g. `1 2 add` => `1 2 +`
 
 ## Examples
 ### [hello.pluto](/examples/hello.pluto)
-![hello](https://github.com/DrLoopFall/Pluto24/assets/120749263/d4a517ba-4402-4699-a7d3-6aea180403cc)
+![hello](https://github.com/DrLoopFall/Pluto24/assets/120749263/371f4009-42ca-4d5e-b488-e51b37038ef7)
 
 ### [fib.pluto](/examples/fib.pluto)
-![fib](https://github.com/DrLoopFall/Pluto24/assets/120749263/b11c6dcc-f75a-420c-92fc-39e9903159e2)
+![fib](https://github.com/DrLoopFall/Pluto24/assets/120749263/27305dfe-9d6c-4d56-afaf-16858e735c60)
 
 ### [max.pluto](/examples/max.pluto)
-![max](https://github.com/DrLoopFall/Pluto24/assets/120749263/5ef76d25-b22d-4f0e-9d3a-979cb7bcd5fb)
+![max](https://github.com/DrLoopFall/Pluto24/assets/120749263/dbe81d07-12d9-47da-9ff2-4451581a9e21)
 
 ### [sum.pluto](/examples/sum.pluto)
-![sum](https://github.com/DrLoopFall/Pluto24/assets/120749263/b5dea694-18f3-4523-b771-c830a219c740)
+![sum](https://github.com/DrLoopFall/Pluto24/assets/120749263/c933ce32-596c-4976-83e2-0e5df40efcba)
 
 ### [operators_sum.pluto](/examples/operators_sum.pluto)
-![operators_sum](https://github.com/DrLoopFall/Pluto24/assets/120749263/b6300620-e31c-4d8a-996a-0067b2e89661)
+![operators_sum](https://github.com/DrLoopFall/Pluto24/assets/120749263/a2709749-f9e3-4bf1-b3dd-051aaebc5cb4)

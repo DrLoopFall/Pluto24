@@ -1,0 +1,7 @@
+: declares a function `add5`
+add5: 5 add : adds 5 to last element of the stack
+
+: program entry point
+main: 10 add5 : calls add5 with argument 10
+
+: stack should be [15] after running the program

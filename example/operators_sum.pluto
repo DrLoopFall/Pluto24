@@ -1,0 +1,8 @@
+sum: sum.run 1 --
+sum.run: 1 - 1 ++ &sum.add ?
+sum.add: <-> 3 ++ + 3 -- <-> sum.run
+
+: Output => Sum of 7,2,9,5 = 23
+main: [ S u m ` o f ` `7 `, `2 `, `9 `, `5  ` `= ` ] >>>
+      7 2 9 5 4 sum
+      string >>>
